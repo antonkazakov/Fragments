@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 
 class FragmentA : Fragment(R.layout.fragment_a) {
 
@@ -13,6 +14,17 @@ class FragmentA : Fragment(R.layout.fragment_a) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    if (childFragmentManager.backStackEntryCount > 0) {
+                        childFragmentManager.popBackStack()
+                    } else {
+                        parentFragmentManager.popBackStack()
+                    }
+                }
+            })
 
         openChildFragmentAABtn = view.findViewById(R.id.openChildFragmentAABtn)
         nameOfFragmentTextView = view.findViewById(R.id.nameOfFragmentATextView)

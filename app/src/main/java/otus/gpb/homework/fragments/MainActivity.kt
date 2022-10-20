@@ -2,7 +2,6 @@ package otus.gpb.homework.fragments
 
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -24,18 +23,6 @@ class MainActivity : AppCompatActivity() {
         secondTaskButton.text = getString(R.string.fragment_task, 2)
 
         firstTaskButton.setOnClickListener {
-            onBackPressedDispatcher.addCallback(this,
-                object : OnBackPressedCallback(true) {
-                    override fun handleOnBackPressed() {
-                        if (fragmentA.childFragmentManager.backStackEntryCount > 0) {
-                            fragmentA.childFragmentManager.popBackStack()
-                        } else {
-                            supportFragmentManager.popBackStack()
-                            isEnabled = false
-                        }
-                    }
-                })
-
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainer, fragmentA)
                 .addToBackStack(null)
