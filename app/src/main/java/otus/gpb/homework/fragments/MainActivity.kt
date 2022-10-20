@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity() {
                 override fun handleOnBackPressed() {
                     if (fragmentA.childFragmentManager.backStackEntryCount > 0) {
                         fragmentA.childFragmentManager.popBackStack()
-                    } else supportFragmentManager.popBackStack()
+                    } else {
+                        supportFragmentManager.popBackStack()
+                        isEnabled = false
+                    }
                 }
             })
 
@@ -39,4 +42,5 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
     }
+
 }
