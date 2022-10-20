@@ -10,11 +10,9 @@ class FragmentA : Fragment(R.layout.fragment_a) {
 
     private lateinit var openChildFragmentAABtn: Button
     private lateinit var nameOfFragmentTextView: TextView
-    private lateinit var fragmentA: FragmentA
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        fragmentA = FragmentA()
 
         openChildFragmentAABtn = view.findViewById(R.id.openChildFragmentAABtn)
         nameOfFragmentTextView = view.findViewById(R.id.nameOfFragmentATextView)

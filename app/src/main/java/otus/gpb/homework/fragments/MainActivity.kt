@@ -2,6 +2,7 @@ package otus.gpb.homework.fragments
 
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,15 @@ class MainActivity : AppCompatActivity() {
 
         fragmentA = FragmentA()
 
+        onBackPressedDispatcher.addCallback(this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    if (fragmentA.childFragmentManager.backStackEntryCount > 0) {
+                        fragmentA.childFragmentManager.popBackStack()
+                    } else supportFragmentManager.popBackStack()
+                }
+            })
+
         firstTaskButton = findViewById(R.id.firstTaskButton)
         secondTaskButton = findViewById(R.id.secondTaskButton)
 
@@ -28,12 +38,5 @@ class MainActivity : AppCompatActivity() {
                 .addToBackStack(null)
                 .commit()
         }
-
-    }
-
-    override fun onBackPressed() {
-        if (fragmentA.childFragmentManager.backStackEntryCount > 0) {
-            fragmentA.childFragmentManager.popBackStack()
-        } else super.onBackPressed()
     }
 }
