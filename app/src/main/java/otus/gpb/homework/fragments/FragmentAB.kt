@@ -12,8 +12,10 @@ class FragmentAB: Fragment(R.layout.fragment_a_b) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val value = arguments?.getInt(ARG_VALUE) ?: Color.WHITE
         view.setBackgroundColor(value)
+
         nameOfFragmentABTextView = view.findViewById(R.id.nameOfFragmentABTextView)
         nameOfFragmentABTextView.text = getString(R.string.name_of_fragment, "AB")
     }

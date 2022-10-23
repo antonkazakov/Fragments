@@ -25,19 +25,16 @@ class FragmentAA : Fragment(R.layout.fragment_a_a) {
         nameOfFragmentTextView.text = getString(R.string.name_of_fragment, "AA")
 
         val randomColor = ColorGenerator.generateColor()
-
         openChildFragmentABBtn.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(
-                    R.id.childFragmentABContainer,
-                    FragmentAB.create(randomColor)
-                )
+                .replace(R.id.childFragmentABContainer, FragmentAB.create(randomColor))
                 .addToBackStack(null)
                 .commit()
         }
     }
 
     companion object {
+
         private const val ARG_VALUE = "value"
 
         fun create(color: Int): FragmentAA {

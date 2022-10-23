@@ -4,5 +4,6 @@
     <string name="fragment_task">Fragment task %d</string>
     <string name="open_fragment">open %s fragment</string>
     <string name="name_of_fragment">Fragment %s</string>
+    <string name="send_color">Send Color</string>
 
 </resources>
