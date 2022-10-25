@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button
+        android:id="@+id/buttonGoAA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonGoFragmentAA"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.7"/>
+<androidx.constraintlayout.widget.Group
+    android:id="@+id/groupChild"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:constraint_referenced_ids="childBB,childBA"
+/>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/childAA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/childBA"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/childBB"
+        android:name="otus.gpb.homework.fragments.fragments.FragmentBA"
+        />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/childBB"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toEndOf="@id/childBA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:name="otus.gpb.homework.fragments.fragments.FragmentBB"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
