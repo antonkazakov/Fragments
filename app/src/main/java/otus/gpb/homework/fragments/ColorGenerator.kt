@@ -1,8 +1,15 @@
 package otus.gpb.homework.fragments
 
 import android.graphics.Color
+import androidx.fragment.app.Fragment
 import java.util.Random
 
+fun Fragment.generator(): Generator {
+    return requireActivity() as Generator
+}
+interface Generator {
+    fun generate(): Int
+}
 object ColorGenerator {
 
     fun generateColor(): Int {
