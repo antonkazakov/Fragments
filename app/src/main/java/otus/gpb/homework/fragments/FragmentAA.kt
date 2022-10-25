@@ -25,6 +25,7 @@ class FragmentAA : Fragment(R.layout.fragment_aa) {
             fragment.arguments = bundle
             parentFragmentManager.beginTransaction()
                 .replace(R.id.childFragConteiner, fragment)
+                .addToBackStack(null)
                 .commit()
         }
     }
