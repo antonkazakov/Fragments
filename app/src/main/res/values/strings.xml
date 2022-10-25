@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Fragments</string>
+    <string name="ButtonGoFragmentA">Go FragmentA</string>
+    <string name="ButtonGoFragmentAA">Go FragmentAA</string>
+    <string name="ButtonGoFragmentAB">Go FragmentAB</string>
+    <string name="ButtonGoFragmentBB">Open FragmentBB</string>
+    <string name="ButtonGoFragmentBA">Send color</string>
 </resources>
