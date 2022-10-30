@@ -3,6 +3,6 @@
     <string name="open_fragment_a">Open Fragment A</string>
     <string name="open_fragment_aa">Open Fragment AA</string>
     <string name="open_fragment_ab">Open Fragment AB</string>
-
-
+    <string name="btn_task_1">Open Task 1</string>
+    <string name="btn_task_2">Open Task 2</string>
 </resources>
