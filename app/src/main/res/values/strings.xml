@@ -4,4 +4,9 @@
     <string name="task_2">Задание #2</string>
     <string name="open_fragment_a_a">Открыть FragmentAA</string>
     <string name="open_fragment_a_b">Открыть FragmentAB</string>
+    <string name="title_activity_item_detail_host">ItemDetailHostActivity</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="send_color">Отправить цвет</string>
+    <string name="open_fragment_b_b">Открыть FragmentBB</string>
 </resources>

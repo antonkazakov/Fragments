@@ -5,29 +5,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.material.button.MaterialButton
+import androidx.fragment.app.FragmentContainerView
 
-class HomeFragment : Fragment() {
+class MasterDetailFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_master_detail, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<MaterialButton>(R.id.open_task_1).setOnClickListener {
+
+        val container2 = view.findViewById<FragmentContainerView>(R.id.fragment_container_view_2)
+
+        if (container2 != null) {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.activity_fragment_container_view, FragmentA())
-                .addToBackStack(null)
+                .replace(R.id.fragment_container_view_1, FragmentBA())
+                .replace(R.id.fragment_container_view_2, FragmentBB())
                 .commit()
-        }
-        view.findViewById<MaterialButton>(R.id.open_task_2).setOnClickListener {
+        } else {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.activity_fragment_container_view, MasterDetailFragment())
-                .addToBackStack(null)
+                .replace(R.id.fragment_container_view_1, FragmentBA())
                 .commit()
         }
     }
