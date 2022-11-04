@@ -1,5 +1,6 @@
 package otus.gpb.homework.fragments
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -12,6 +13,9 @@ class FragmentBB : Fragment(R.layout.fragment_bb) {
             val bundle = Bundle()
             bundle.putInt("color", ColorGenerator.generateColor())
             parentFragmentManager.setFragmentResult("result", bundle)
+            if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+                parentFragmentManager.popBackStack()
+            }
         }
 
     }
