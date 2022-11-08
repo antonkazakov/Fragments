@@ -33,6 +33,6 @@ class ActivityTaskOne : AppCompatActivity() {
     }
 
     companion object {
-        const val FRAGMENT_A = "fragmentA"
+        private const val FRAGMENT_A = "fragmentA"
     }
 }

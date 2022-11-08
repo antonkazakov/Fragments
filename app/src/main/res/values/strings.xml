@@ -4,14 +4,24 @@
     <string name="task_one">Task One</string>
     <string name="task_two">Task Two</string>
     <!-- MainActivity end -->
+
     <!-- Fragment A begin -->
     <string name="open_fragment_aa">Open Fragment AA \n with color %1$s</string>
     <!-- Fragment A end -->
+
     <!-- Fragment AA begin -->
     <string name="open_fragment_ab">Open Fragment AB \n with color %1$s</string>
     <!-- Fragment AA end -->
+
     <!-- Fragment AB begin -->
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment AB</string>
     <!-- Fragment AB end -->
+
+    <!-- Fragment AA begin -->
+    <string name="open_fragment_bb">Open Fragment BB</string>
+    <!-- Fragment AA end -->
+
+    <!-- Fragment BB begin -->
+    <string name="send_color">Send color</string>
+    <!-- Fragment BB end -->
 </resources>

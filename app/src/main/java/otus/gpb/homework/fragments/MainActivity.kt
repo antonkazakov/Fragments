@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ActivityTaskOne::class.java))
         }
         findViewById<Button>(R.id.button_taskTwo).setOnClickListener {
-            //TODO task2
+            startActivity(Intent(this, ActivityTaskTwo::class.java))
         }
     }
 }
