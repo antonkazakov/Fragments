@@ -6,4 +6,9 @@
     <string name="btn_open_fragmentab">Open FragmentAB</string>
     <string name="fragment_aa">FragmentAA</string>
     <string name="fragment_ab">FragmentAB</string>
+    <string name="fragment_ba">FragmentBA</string>
+    <string name="btn_open_fragmentbb">Open FragmentBB</string>
+    <string name="btn_send_color">Send color</string>
+    <string name="fragment_bb">FragmentBB</string>
+    <string name="btn_open_second_activity">Open Task2</string>
 </resources>

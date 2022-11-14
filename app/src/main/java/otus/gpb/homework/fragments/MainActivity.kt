@@ -1,5 +1,6 @@
 package otus.gpb.homework.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.OnBackPressedCallback
@@ -34,12 +35,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initListeners() {
-        binding.button.setOnClickListener {
-            hideButton()
-            supportFragmentManager.beginTransaction()
-                .add(R.id.container, fragmentA)
-                .addToBackStack(FragmentA.TAG)
-                .commit()
+        with(binding) {
+            button.setOnClickListener {
+                hideButton()
+                supportFragmentManager.beginTransaction()
+                    .add(R.id.container, fragmentA)
+                    .addToBackStack(FragmentA.TAG)
+                    .commit()
+            }
+            buttonSecond.setOnClickListener {
+                startActivity(Intent(this@MainActivity, SecondActivity::class.java))
+            }
         }
     }
 
