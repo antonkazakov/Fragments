@@ -5,4 +5,6 @@
     <string name="open_fragment_a">Open Fragment A</string>
     <string name="open_fragment_aa">Open Fragment AA</string>
     <string name="open_fragment_ab">Open Fragment AB</string>
+    <string name="open_fragment_bb">Open Fragment BB</string>
+    <string name="send_color">Send Color</string>
 </resources>

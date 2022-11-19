@@ -27,6 +27,11 @@
             android:label="FirstTask"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".SecondTaskActivity"
+            android:label="SecondTask"
+            android:exported="false">
+        </activity>
     </application>
 
 </manifest>

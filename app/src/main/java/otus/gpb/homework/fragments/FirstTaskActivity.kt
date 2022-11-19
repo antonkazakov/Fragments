@@ -30,7 +30,7 @@ class FirstTaskActivity : AppCompatActivity() {
 
         this.onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
-                if (fragmentA.childFragmentManager.backStackEntryCount > 1) {
+                if (supportFragmentManager.backStackEntryCount > 0 && fragmentA.childFragmentManager.backStackEntryCount > 1) {
                     fragmentA.childFragmentManager.popBackStack()
                 } else {
                     finish()

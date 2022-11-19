@@ -14,5 +14,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.first_task_button)?.setOnClickListener {
             startActivity(Intent(this, FirstTaskActivity::class.java))
         }
+
+        findViewById<Button>(R.id.second_task_button)?.setOnClickListener {
+            startActivity(Intent(this, SecondTaskActivity::class.java))
+        }
     }
 }
