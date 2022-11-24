@@ -1,13 +1,10 @@
 package otus.gpb.homework.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 
 class FragmentAB : Fragment() {
 
@@ -29,11 +26,6 @@ class FragmentAB : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         colorId?.let { view.setBackgroundColor(it) }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("Fragment", "Fragment AB on Destroy")
     }
 
     companion object{

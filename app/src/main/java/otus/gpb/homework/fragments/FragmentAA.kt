@@ -1,12 +1,10 @@
 package otus.gpb.homework.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 
 class FragmentAA : Fragment() {
@@ -41,10 +39,6 @@ class FragmentAA : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("Fragment", "Fragment AA on Destroy")
-    }
     companion object{
 
         private const val COLOR_ID = "ColorId"
