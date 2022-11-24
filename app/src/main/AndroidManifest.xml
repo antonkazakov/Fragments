@@ -13,8 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fragments"
         tools:targetApi="31">
+        <!-- <activity -->
+        <!-- android:name=".FragmentContainer" -->
+        <!-- android:exported="false"> -->
+        <!-- </activity> -->
         <activity
-            android:name=".MainActivity"
+            android:name=".FragmentContainer"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
