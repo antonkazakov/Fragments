@@ -9,8 +9,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         findViewById<Button>(R.id.button_open_fragment_a).setOnClickListener {
-            startActivity(Intent(this, FragmentContainer::class.java))
+            startActivity(Intent(this, FragmentContainerA::class.java))
+        }
+
+        findViewById<Button>(R.id.button_open_fragment_b).setOnClickListener {
+            startActivity(Intent(this, FragmentContainerB::class.java))
         }
     }
 }
