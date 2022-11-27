@@ -1,5 +1,6 @@
 package otus.gpb.homework.fragments
 
+import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +11,13 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.button.MaterialButton
 
 class FragmentBA : Fragment() {
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        parentFragmentManager.beginTransaction()
+            .setPrimaryNavigationFragment(this@FragmentBA)
+            .commit()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
