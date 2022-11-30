@@ -1,5 +1,6 @@
 package otus.gpb.homework.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -23,6 +24,10 @@ class MainActivity : AppCompatActivity() {
                     .commit()
                 it.visibility = View.GONE
             }
+        }
+        findViewById<Button>(R.id.open_fragment_b).setOnClickListener{
+            intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
 
         this.onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
