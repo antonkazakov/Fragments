@@ -3,6 +3,7 @@ package otus.gpb.homework.fragments
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentContainerView
+import android.content.res.Configuration
 
 class ActivityTaskTwo : AppCompatActivity() {
 
@@ -10,8 +11,6 @@ class ActivityTaskTwo : AppCompatActivity() {
     private lateinit var fragmentBB: FragmentBB
 
     private var frameFragmentBB: FragmentContainerView? = null
-
-    private fun isLand() = frameFragmentBB != null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,16 +22,20 @@ class ActivityTaskTwo : AppCompatActivity() {
                 .replace(R.id.fragment_container_view_tag_task_two, fragmentBA, FRAGMENT_BA)
                 .addToBackStack(null)
                 .commit()
-            if (isLand()) {
+            if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 fragmentBB = FragmentBB()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container_view_tag_task_two_fragmentBB, fragmentBB, FRAGMENT_BB)
+                    .replace(
+                        R.id.fragment_container_view_tag_task_two_fragmentBB,
+                        fragmentBB,
+                        FRAGMENT_BB
+                    )
                     .addToBackStack(null)
                     .commit()
             }
         } else {
             fragmentBA = supportFragmentManager.findFragmentByTag(FRAGMENT_BA) as FragmentBA
-            if (isLand()) {
+            if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 fragmentBB = supportFragmentManager.findFragmentByTag(FRAGMENT_BB) as FragmentBB
             }
         }

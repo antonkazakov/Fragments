@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
-import otus.gpb.homework.fragments.ArgValue.Companion.ARG_COLOR
 
 class FragmentAA : Fragment(R.layout.fragment_a_a) {
 
@@ -29,6 +28,9 @@ class FragmentAA : Fragment(R.layout.fragment_a_a) {
 
 
     companion object {
+
+        const val ARG_COLOR = "color"
+
         fun create(color: Int): FragmentAA {
             val fragment = FragmentAA()
             val arguments = Bundle()

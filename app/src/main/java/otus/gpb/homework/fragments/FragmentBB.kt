@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import otus.gpb.homework.fragments.MainActivity.Companion.COLOR
+import otus.gpb.homework.fragments.MainActivity.Companion.RESULT_BA
 
-class FragmentBB : Fragment(R.layout.fragment_b_b), ColorReciver {
+class FragmentBB : Fragment(R.layout.fragment_b_b) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -14,8 +16,8 @@ class FragmentBB : Fragment(R.layout.fragment_b_b), ColorReciver {
 
         sendColor.setOnClickListener {
             val colorToFragmentBA = Bundle()
-            colorToFragmentBA.putInt(ColorReciver.COLOR, ColorGenerator.generateColor())
-            parentFragmentManager.setFragmentResult(ColorReciver.RESULT_BA, colorToFragmentBA)
+            colorToFragmentBA.putInt(COLOR, ColorGenerator.generateColor())
+            parentFragmentManager.setFragmentResult(RESULT_BA, colorToFragmentBA)
 
             if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
                 parentFragmentManager.popBackStack()

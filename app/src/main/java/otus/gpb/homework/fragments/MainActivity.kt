@@ -17,4 +17,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ActivityTaskTwo::class.java))
         }
     }
+
+    companion object {
+        const val COLOR = "color"
+        const val RESULT_BA = "result to BA"
+    }
 }

@@ -4,14 +4,16 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
+import otus.gpb.homework.fragments.MainActivity.Companion.COLOR
+import otus.gpb.homework.fragments.MainActivity.Companion.RESULT_BA
 
-class FragmentBA : Fragment(R.layout.fragment_b_a), ColorReciver {
+class FragmentBA : Fragment(R.layout.fragment_b_a) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        parentFragmentManager.setFragmentResultListener(ColorReciver.RESULT_BA, this) { _, result ->
-            val value = result.getInt(ColorReciver.COLOR)
+        parentFragmentManager.setFragmentResultListener(RESULT_BA, this) { _, result ->
+            val value = result.getInt(COLOR)
             view.setBackgroundColor(value)
         }
 
