@@ -18,5 +18,12 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 .addToBackStack(null)
                 .commit()
         }
+
+        view.findViewById<Button>(R.id.fragment_ba_btn).setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.activity_container, FragmentBA())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 }

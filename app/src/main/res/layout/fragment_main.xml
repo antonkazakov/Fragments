@@ -7,10 +7,20 @@
 
     <Button
         android:id="@+id/fragment_a_btn"
-        android:textAllCaps="false"
-        android:layout_gravity="center"
-        android:text="@string/fragmenta"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="@string/fragmenta"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/fragment_ba_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/fragmentba"
+        android:textAllCaps="false" />
 
 </FrameLayout>

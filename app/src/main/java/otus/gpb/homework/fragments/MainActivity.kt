@@ -21,14 +21,5 @@ class MainActivity : AppCompatActivity() {
         } else {
             mainFragment = supportFragmentManager.findFragmentByTag("mainFragment") as MainFragment
         }
-
-//        onBackPressedDispatcher.addCallback(object : OnBackPressedCallback(true) {
-//            override fun handleOnBackPressed() {
-//                val fragmentManager = supportFragmentManager
-//                if (fragmentManager.backStackEntryCount > 0) {
-//                    fragmentManager.popBackStack()
-//                }
-//            }
-//        })
     }
 }
