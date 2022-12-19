@@ -1,5 +1,6 @@
 package otus.gpb.homework.fragments
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -25,24 +26,26 @@ class MainActivity : AppCompatActivity() {
 
         firstTaskButton.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, FragmentA())
+                .add(R.id.fragmentContainer, FragmentA())
                 .addToBackStack(null)
                 .commit()
         }
 
-        secondTaskButton.setOnClickListener {
-            if (firstLandscapeFragmentContainer != null && secondLandscapeFragmentContainer != null) {
+        secondTaskButton.setOnClickListener{
+            val orientation = resources.configuration.orientation
+            if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.landscapeFragmentContainer1, FragmentBA())
-                    .replace(R.id.landscapeFragmentContainer2, FragmentBB())
+                    .add(R.id.landscapeFragmentContainer1, FragmentBA())
+                    .add(R.id.landscapeFragmentContainer2, FragmentBB())
                     .addToBackStack(null)
                     .commit()
             } else {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainer, FragmentBA())
+                    .add(R.id.fragmentContainer, FragmentBA())
                     .addToBackStack(null)
                     .commit()
             }
         }
+
     }
 }
