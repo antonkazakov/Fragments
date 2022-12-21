@@ -6,4 +6,8 @@
     <string name="fragmentaa">FragmentAA</string>
     <string name="open_fragmnetab">Open FragmnetAB</string>
     <string name="fragmentab">FragmentAB</string>
+    <string name="sendcolor">SendColor</string>
+    <string name="open_fragmentbb">Open FragmentBB</string>
+    <string name="open_task1">Open Task1</string>
+    <string name="open_task2">Open Task2</string>
 </resources>
