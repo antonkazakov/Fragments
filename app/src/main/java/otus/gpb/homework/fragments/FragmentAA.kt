@@ -26,11 +26,8 @@ class FragmentAA: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         backgroundColor.let { view.setBackgroundColor(it) }
-
         val fragmentABColor = ColorGenerator.generateColor()
-
         val fragmentAB = FragmentAB.createNewInstance(fragmentABColor)
 
         view.findViewById<Button>(R.id.button_to_AB)?.setOnClickListener {

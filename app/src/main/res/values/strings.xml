@@ -10,4 +10,7 @@
     <string name="open_fragmentbb">Open FragmentBB</string>
     <string name="open_task1">Open Task1</string>
     <string name="open_task2">Open Task2</string>
+    <string name="fragmentbb">FragmentBB</string>
+    <string name="fragmentba">FragmentBA</string>
+    <string name="fragmentba_portrait">FragmentBA_portrait</string>
 </resources>
