@@ -20,7 +20,7 @@ class FragmentAB : Fragment() {
 
         val color = arguments?.getInt("color") ?: 0
 
-        view.findViewById<View>(R.id.fragmentAB).setBackgroundColor(color)
+        view.findViewById<View>(R.id.fragment_a_b).setBackgroundColor(color)
     }
 
     companion object {
